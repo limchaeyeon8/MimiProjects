@@ -1,7 +1,6 @@
 # MimiProjects
 IoT 시스템 개발자 미니 프로젝트 리포지토리
 
-
 ## Part1
 미니프로젝트 Part1
 
