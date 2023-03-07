@@ -5,6 +5,7 @@
 ## Python PyQt5 학습
 - PyQt 복습
 - QtDesigner 학습
+- Naver API 뉴스검색 앱 만들기
 
 ## DB연동 GUI 개발 학습
 
