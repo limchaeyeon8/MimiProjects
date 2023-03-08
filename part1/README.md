@@ -7,7 +7,7 @@
 - QtDesigner 학습
 - Naver API 뉴스검색 앱 만들기
 
-![네이버뉴스앱]('')
+![네이버뉴스앱]('https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyQt/NaverNewsNewjeans.png')
 
 ## DB연동 GUI 개발 학습
 
