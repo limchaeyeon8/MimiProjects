@@ -9,6 +9,10 @@
 
 ![네이버뉴스앱](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyQt/NaverNewsNewjeans.png)
 
+<!--
+<img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyQt/NaverNewsNewjeans.png" width="800" />
+-->
+
 ## DB연동 GUI 개발 학습
 
 
