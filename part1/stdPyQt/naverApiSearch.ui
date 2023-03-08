@@ -133,10 +133,6 @@
         <string>검색</string>
        </property>
       </widget>
-      <zorder>splitter</zorder>
-      <zorder>label</zorder>
-      <zorder>txtSearch</zorder>
-      <zorder>btnSearch</zorder>
      </widget>
     </item>
    </layout>
@@ -151,8 +147,24 @@
     </rect>
    </property>
    <layout class="QVBoxLayout" name="resultLayout_2">
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
     <item>
-     <widget class="QListView" name="lsvResult"/>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QTableWidget" name="tblResult"/>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
