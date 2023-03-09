@@ -90,7 +90,7 @@ class qtApp(QWidget):
             self.tblResult.setItem(i, 3, QTableWidgetItem(actor))        
             self.tblResult.setItem(i, 4, QTableWidgetItem(userRating))        
             self.tblResult.setItem(i, 5, QTableWidgetItem(link))
-            self.tblResult.setItem(i, 6, QTableWidgetItem(img_url))
+            self.tblResult.setItem(i, 6, QTableWidgetItem(img_url)) # 일반 텍스트
 
 
             #if imageData != None:
