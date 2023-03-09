@@ -56,8 +56,8 @@ class qtApp(QWidget):
         self.tblResult.setColumnCount(7)            # 컬럼개수 증가
         self.tblResult.setRowCount(len(items))      # (현재)3개 행 생성
         self.tblResult.setHorizontalHeaderLabels(['영화제목', '개봉년도', '감독', '배우진', '평점', '영화링크', '포스터'])
-        self.tblResult.setColumnWidth(0, 145)
-        self.tblResult.setColumnWidth(1, 50)    # 개봉년도
+        self.tblResult.setColumnWidth(0, 150)
+        self.tblResult.setColumnWidth(1, 75)    # 개봉년도
         self.tblResult.setColumnWidth(4, 45)    # 평점
 
         # 컬럼 데이터 수정금지시킴
@@ -65,15 +65,14 @@ class qtApp(QWidget):
 
 
         for i, post in enumerate(items):     # 0, 영화,,,,
-            title = self.replaceHtmlTag(post['title'])      # HTML 특수문자 변환
+            title = self.replaceHtmlTag(post['title'])      # HTML 특수문자 변환    /// 영어제목 가져오기 추가해야함
             pubDate = post['pubDate']
             director = post['director']
             actor = post['actor']
             userRating = post['userRating']
             link = post['link']
 
-            #imageData = urlopen(post['image']).read()
-            #image = QPixmap()
+            img_url = post['image']
 
             #if imageData != None:
             #    image.loadFromData(imageData)
@@ -91,6 +90,8 @@ class qtApp(QWidget):
             self.tblResult.setItem(i, 3, QTableWidgetItem(actor))        
             self.tblResult.setItem(i, 4, QTableWidgetItem(userRating))        
             self.tblResult.setItem(i, 5, QTableWidgetItem(link))
+            self.tblResult.setItem(i, 6, QTableWidgetItem(img_url))
+
 
             #if imageData != None:
             #    self.tblResult.setCellWidget(i, 6, imgLabel)

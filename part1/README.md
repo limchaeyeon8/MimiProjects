@@ -17,6 +17,11 @@
 <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyQt/NaverNewsNewjeans.png" width="800" />
 -->
 
+- Naver API 영화검색 앱 만들기
+  - 사용 기술 동일
+
+<>
+
 ## DB연동 GUI 개발 학습
 
 
