@@ -44,6 +44,7 @@
 
 ![큐알앱1](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/QrGen1.png)
 ![큐알앱2](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/QrGen2.png)
+--->
 ![큐알앱3](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/qrResult.png)
 
 
