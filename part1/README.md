@@ -38,5 +38,11 @@
 
 ![주소록앱3-삭제](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyQt/adr_del.png)
 
+## 파이썬 관련 추가학습
+- QR코드 생성 앱
+  - qrcode 모듈
+![큐알앱1](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/QrGen1.png)
+![큐알앱2](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/QrGen2.png)
+
 
 ## 미니프로젝트 실습
