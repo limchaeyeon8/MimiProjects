@@ -18,6 +18,7 @@ class qtApp(QMainWindow):
 
         # 시그널/슬롯 함수 생성
         self.btnQrGen.clicked.connect(self.btnQrGenClicked)
+        self.txtQrData.returnPressed.connect(self.btnQrGenClicked)
 
     def btnQrGenClicked(self):
         data = self.txtQrData.text()
