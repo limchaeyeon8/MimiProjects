@@ -48,4 +48,14 @@
 ![큐알앱3](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/qrResult.png)
 
 
+- 컴퓨터 정보출력 앱
+  - psutil 모듈
+  - socket 모듈
+  - requests 모듈
+  - PyQt
+  
+![컴퓨터정보1](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/comInfo1.png)
+![컴퓨터정보2](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/comInfo2.png)
+
+
 ## 미니프로젝트 실습
