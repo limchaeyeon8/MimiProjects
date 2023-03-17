@@ -64,7 +64,11 @@
 
 - 암호해제 프로그램
   - itertools, zipfile 기본모듈
+  - 무차별 대입공격(Bruth Force)
 
+- Thread 사용법
+  - GUI와 처리시간이 긴 로직을 실행하면 반드시 Thread 사용
 
+- 이메일 보내기 앱
 
 ## 미니프로젝트 실습
