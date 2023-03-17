@@ -71,4 +71,9 @@
 
 - 이메일 보내기 앱
 
+- 게임만들기 - DinoRun
+  - PyGame
+
+  <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyGame/dinogame.png" width="800" />
+
 ## 미니프로젝트 실습
