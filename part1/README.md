@@ -80,9 +80,12 @@
 - 게임만들기 - DinoRun
   - PyGame
 
-collision detection
+▽ collision detection
+
   <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyGame/dinogame.png" width="800" />
-실행화면
+  
+▽ 실행화면
+
   <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyGame/DinoRun.gif" width="800" />
 
 
