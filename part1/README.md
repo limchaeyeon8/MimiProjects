@@ -69,7 +69,7 @@
 - Thread 사용법
   - GUI와 처리시간이 긴 로직을 실행하면 반드시 Thread 사용
 
-![스레드](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdThread/thread.gif)
+![스레드](https://raw.githubusercontent.com/limchaeyeon8/MiniProjects/main/part1/stdThread/thread.gif)
 
 - 이메일 보내기 앱
   - 이메일 전송, 대량메일 전송
