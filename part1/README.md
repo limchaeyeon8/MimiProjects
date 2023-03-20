@@ -54,6 +54,8 @@
   - requests 모듈
   - PyQt
   
+▽ 새로고침 전-후
+
 ![컴퓨터정보1](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/comInfo1.png)
 ![컴퓨터정보2](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/comInfo2.png)
 
@@ -97,5 +99,8 @@
 
 <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/univMap.png" width="800" />    
 
+
+- 계산기앱
+  - PyQt
 
 ## 미니프로젝트 실습
