@@ -70,7 +70,7 @@
 - Thread 사용법
   - GUI와 처리시간이 긴 로직을 실행하면 반드시 Thread 사용
 
-<img src="https://raw.githubusercontent.com/limchaeyeon8/MiniProjects/main/part1/stdThread/thread.gif" width="800" />
+<img src="https://raw.githubusercontent.com/limchaeyeon8/MiniProjects/main/part1/stdThread/thread.gif" width="500" />
 
 
 - 이메일 보내기 앱
@@ -80,8 +80,9 @@
 - 게임만들기 - DinoRun
   - PyGame
 
+collision detection
   <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyGame/dinogame.png" width="800" />
-
+실행화면
   <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyGame/DinoRun.gif" width="800" />
 
 
