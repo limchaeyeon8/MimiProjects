@@ -76,7 +76,7 @@
 
   <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyGame/dinogame.png" width="800" />
 
-  <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyGame/dinoRun.mp4" width="800" />
+  <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyGame/dinoRun.gif" width="800" />
 
 
 ## 미니프로젝트 실습
