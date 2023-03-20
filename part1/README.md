@@ -69,7 +69,10 @@
 - Thread 사용법
   - GUI와 처리시간이 긴 로직을 실행하면 반드시 Thread 사용
 
+![스레드](https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdThread/thread.gif)
+
 - 이메일 보내기 앱
+  - 이메일 전송, 대량메일 전송
 
 - 게임만들기 - DinoRun
   - PyGame
@@ -77,6 +80,9 @@
   <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyGame/dinogame.png" width="800" />
 
   <img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyGame/DinoRun.gif" width="800" />
+
+
+- 전국 대학교 위치맵
 
 
 ## 미니프로젝트 실습
