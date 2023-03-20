@@ -97,13 +97,13 @@
   - PyQt
     - QWebEngineView 추가
 
-<img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/univMap.png" width="800" />    
+<img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPython/univMap.png" width="700" />    
 
 
 - 계산기앱
   - PyQt
   - 16개의 signal을 1개의 slot함수로 처리
-<img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyQt/calc.png" width="250" />    
+<img src="https://raw.githubusercontent.com/limchaeyeon8/MimiProjects/main/part1/stdPyQt/calc.png" width="700" />    
 
 
 ## 미니프로젝트 실습
