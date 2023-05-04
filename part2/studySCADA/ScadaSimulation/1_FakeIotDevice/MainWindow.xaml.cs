@@ -2,24 +2,14 @@
 using Bogus;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Security.Policy;
+using Newtonsoft.Json;
 using System.Text;
+using System.Diagnostics;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using uPLibrary.Networking.M2Mqtt;
+using System.Windows.Documents;
+using System;
 
 namespace _1_FakeIotDevice
 {
@@ -32,7 +22,7 @@ namespace _1_FakeIotDevice
         //
         Faker<SensorInfo> FakeHomeSensor = null;    // 가짜 스마트홈 센서값 변수
 
-        MqttClient client;
+        MqttClient Client { get; set;}
         Thread MqttThread { get; set; }
 
         public MainWindow()
@@ -47,7 +37,7 @@ namespace _1_FakeIotDevice
             var Rooms = new[] { "Bed", "Bath", "Living", "Dining" };
 
             FakeHomeSensor = new Faker<SensorInfo>()
-                .RuleFor(s => s.Home_Id, "D101H1603")   // 임의로 픽스된 스마트홈아이디
+                .RuleFor(s => s.Home_Id, "D101H1603")                       // 임의로 픽스된 스마트홈아이디
                 .RuleFor(s => s.Room_Name, f => f.PickRandom(Rooms))        // PickRandom - 실행할 때마다 방이름이 계속 변경
                 .RuleFor(s => s.Sensing_DateTime, f => f.Date.Past(0))      // 현재시각이 생성
                 .RuleFor(s => s.Temp, f => f.Random.Float(20.0f, 30.0f))    // 20~30도 사이의 실수온도값 생성
@@ -71,6 +61,7 @@ namespace _1_FakeIotDevice
 
         }
 
+        #region < 핵심처리 센싱된 데이터값을 MQTT 브로커로 전송 >
         private void StartPublish()
         {
             MqttThread = new Thread(() =>
@@ -79,13 +70,26 @@ namespace _1_FakeIotDevice
                 {
                     // 가짜 스마트홈 센서값 생성
                     SensorInfo info = FakeHomeSensor.Generate();
-                    Debug.WriteLine($"{info.Home_Id} | {info.Room_Name} | {info.Sensing_DateTime} | {info.Temp} | {info.Humid}");
 
+                    // 릴리즈(배포) 때는 주석처리or삭제
+                    Debug.WriteLine($"{info.Home_Id} | {info.Room_Name} | {info.Sensing_DateTime} | {info.Temp} | {info.Humid}");
+                    // 객체 직렬화; 객체 데이터를 xml이나 json 등의 문자열로 변환
+                    var jsonValue = JsonConvert.SerializeObject(info, Formatting.Indented);
 
                     // 센서값 MQTT브로커에 전송(Publish)
+                    Client.Publish("SmartHome/IoTData/", Encoding.Default.GetBytes(jsonValue));        // 토픽 - 스마트홈에 개별적 집에 있는 IoT 데이터  // 이진바이트로 바꾸어 전달
+
+                    // (+) 스레드-UI스레드 충돌이 안 나도록 변경
+                    this.Invoke(new Action(() =>
+                    {
+
+                        // RtbLog에 출력
+                        RtbLog.AppendText($"{jsonValue}\n");
+
+                        RtbLog.ScrollToEnd();       // 스크롤 제일 밑으로 보내기
+                    }));
 
 
-                    // RtbLog에 출력
 
                     // 1초동안 대기
                     Thread.Sleep(1000);
@@ -96,21 +100,22 @@ namespace _1_FakeIotDevice
 
         private void ConnectMqttBroker()
         {
-            client = new MqttClient(TxtMqttBrokerIp.Text);
-            client.Connect("SmartHomeDev");         // publish하는 클라이언트 아이디 넣어줌(지정)
+            Client = new MqttClient(TxtMqttBrokerIp.Text);
+            Client.Connect("SmartHomeDev");         // publish하는 클라이언트 아이디 넣어줌(지정)
         }
 
         private void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (client != null && client.IsConnected == true)
+            if (Client != null && Client.IsConnected == true)
             {
-                client.Disconnect();        // 접속을 끊어주고
+                Client.Disconnect();                // 접속을 끊어주고
             }
 
             if (MqttThread != null)
             {
-                MqttThread.Abort();       // 완전 종료  // 여기가 없으면 프로그램 종료 후에도 메모리에 남아있음!!!!
+                MqttThread.Abort();                 // 완전 종료  // 여기가 없으면 프로그램 종료 후에도 메모리에 남아있음!!!!
             }
         }
+        #endregion
     }
 }
