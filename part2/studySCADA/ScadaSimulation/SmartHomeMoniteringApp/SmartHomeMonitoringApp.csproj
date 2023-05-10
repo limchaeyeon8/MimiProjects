@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BF399D4D-81E1-4578-A97D-53F9966EFB5A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SmartHomeMoniteringApp</RootNamespace>
-    <AssemblyName>SmartHomeMoniteringApp</AssemblyName>
+    <RootNamespace>SmartHomeMonitoringApp</RootNamespace>
+    <AssemblyName>SmartHomeMonitoringApp</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -229,11 +229,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Views\DataBasePage.xaml.cs">
-      <DependentUpon>DataBasePage.xaml</DependentUpon>
+    <Compile Include="Logics\Commons.cs" />
+    <Compile Include="RealTimeControl.xaml.cs">
+      <DependentUpon>RealTimeControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DBControl.xaml.cs">
       <DependentUpon>DBControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MqttPopupWindow.xaml.cs">
+      <DependentUpon>MqttPopupWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -247,11 +251,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\DataBasePage.xaml">
+    <Page Include="RealTimeControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DBControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MqttPopupWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -283,9 +291,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logics\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="home-assistant.ico" />
   </ItemGroup>

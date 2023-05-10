@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using SmartHomeMonitoringApp.Views;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -14,8 +15,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using System.Windows.Documents.Serialization;
 
-namespace SmartHomeMoniteringApp
+namespace SmartHomeMonitoringApp
 {
     /// <summary>
     /// MainWindow.xaml에 대한 상호 작용 논리
@@ -31,7 +33,7 @@ namespace SmartHomeMoniteringApp
         {
             // <Frame> ==> Page.Xaml
             // <ContentControl> ==> UserControl.xaml
-            ActiveItem.Content = new Views.DBControl();
+            //ActiveItem.Content = new Views.DBControl();
         }
 
         // 끝내기 버튼 클릭 이벤트 핸들러
@@ -40,5 +42,28 @@ namespace SmartHomeMoniteringApp
             System.Diagnostics.Process.GetCurrentProcess().Kill();  // 작업관리자에서 프로세스 종료!
             //Environment.Exit(0);        // 0: normal - 종료       // 둘 중 하나만 쓰면 됨
         }
+
+        private void MnuStartSubscribe_Click(object sender, RoutedEventArgs e)
+        {
+            var mqttPopWin = new MqttPopupWindow();
+            mqttPopWin.Owner = this;
+            mqttPopWin.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            var result = mqttPopWin.ShowDialog();
+
+            if (result == true)
+            {
+                ActiveItem.Content = new Views.DBControl();
+            }
+        }
+
+
+
+        private void BtnExitSubscribe_Click(object sender, RoutedEventArgs e)
+        {
+            // 확인메시지 윈도우 클로징 이벤트핸들러 호출
+            this.MetroWindow_Closing(sender, new CancelledEventArgs());
+        }
     }
 }
+
+

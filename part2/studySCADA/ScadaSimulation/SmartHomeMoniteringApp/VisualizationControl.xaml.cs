@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SmartHomeMoniteringApp.Views
+namespace SmartHomeMonitoringApp
 {
     /// <summary>
-    /// DataBasePage.xaml에 대한 상호 작용 논리
+    /// VisualizationControl.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class DataBasePage : Page
+    public partial class VisualizationControl : UserControl
     {
-        public DataBasePage()
+        public VisualizationControl()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MQTT Publisher", "MQTT Publ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_FakeIotDevice", "1_FakeIotDevice\1_FakeIotDevice.csproj", "{7CDE1301-9FAE-402E-A0BE-75BCACB5F465}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeMoniteringApp", "SmartHomeMoniteringApp\SmartHomeMoniteringApp.csproj", "{BF399D4D-81E1-4578-A97D-53F9966EFB5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeMonitoringApp", "SmartHomeMoniteringApp\SmartHomeMonitoringApp.csproj", "{BF399D4D-81E1-4578-A97D-53F9966EFB5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

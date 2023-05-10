@@ -7,11 +7,14 @@
     - MahApps.Metro ( MetroUI 디자인 라이브러리 )
     - Bogus ( 더미데이터 생성 라이브러리 )
     - Newtonsoft.json
-    - M2Mqtt ( 통신라이브러리 ) - MQTT 연동
+    - M2Mqtt ( 통신라이브러리 ) - MQTT 연동- Mosquitto
     - DB 데이터바인딩
     - LiveCharts
     - OxyChart
 
+
+- 문제점,,
+    - 
+
 ## 
 
-- Mosquitto

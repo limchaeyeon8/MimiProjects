@@ -10,6 +10,7 @@ using System.Windows;
 using uPLibrary.Networking.M2Mqtt;
 using System.Windows.Documents;
 using System;
+using System.Security.AccessControl;
 
 namespace _1_FakeIotDevice
 {
@@ -104,18 +105,36 @@ namespace _1_FakeIotDevice
             Client.Connect("SmartHomeDev");         // publish하는 클라이언트 아이디 넣어줌(지정)
         }
 
-        private void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private async void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (Client != null && Client.IsConnected == true)
+            var mySetting = new MetroDialogSettings
             {
-                Client.Disconnect();                // 접속을 끊어주고
+                AffirmativeButtonText = "끝내기",
+                NegativeButtonText = "취소",
+                AnimateShow = true,
+                AnimateHide = true
+            };
+
+            var result = await this.ShowMessageAsync("프로그램 끝내기", "프로그램을 끝내시겠습니까?",
+                MessageDialogStyle.AffirmativeAndNegative, mySetting);
+
+            if (result == MessageDialogResult.Negative)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                if (Commons.MQTT_CLIENT.IsConnected)
+                {
+                    Commons.MQTT_CLIENT.DisConnect;
+
+                }
             }
 
-            if (MqttThread != null)
-            {
-                MqttThread.Abort();                 // 완전 종료  // 여기가 없으면 프로그램 종료 후에도 메모리에 남아있음!!!!
-            }
+
+            private void Btn 
         }
+
         #endregion
     }
 }
