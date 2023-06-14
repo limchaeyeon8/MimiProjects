@@ -239,6 +239,9 @@
     <Compile Include="Views\MqttPopupWindow.xaml.cs">
       <DependentUpon>MqttPopupWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VisualizationControl.xaml.cs">
+      <DependentUpon>VisualizationControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -260,6 +263,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MqttPopupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualizationControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

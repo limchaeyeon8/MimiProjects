@@ -1,0 +1,9 @@
+CREATE TABLE `smarthomesensor` (
+  `id` decimal(10,0) NOT NULL,
+  `Home_id` varchar(20) NOT NULL,
+  `Room_Name` varchar(20) NOT NULL,
+  `Sensing_DateTime` datetime NOT NULL,
+  `Temp` float NOT NULL,
+  `Humid` float NOT NULL,
+  PRIMARY KEY (`id`)
+) 
